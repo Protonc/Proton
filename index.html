@@ -20,6 +20,9 @@
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     .logo {
@@ -29,10 +32,26 @@
       letter-spacing: 2px;
     }
 
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00ffcc;
+    }
+
     /* Card Container */
     .card-container {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       flex-wrap: wrap;
       padding: 2rem;
       gap: 2rem;
@@ -70,28 +89,34 @@
 </head>
 <body>
 
+  <!-- Navbar -->
   <div class="navbar">
     <div class="logo">Proron</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </div>
   </div>
 
+  <!-- Cards -->
   <div class="card-container">
     <div class="card">
-      <img src="https://source.unsplash.com/300x200/?smartphone,technology" alt="Product 1">
+      <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Smartphone">
       <h3>AI Smartphone</h3>
-      <p>Powered by next-gen AI chips and neural processing for ultimate speed and camera quality.</p>
+      <p>Powered by neural processors and AI photography. Experience smart like never before.</p>
     </div>
     <div class="card">
-      <img src="https://source.unsplash.com/300x200/?laptop,technology" alt="Product 2">
+      <img src="https://images.unsplash.com/photo-1610484820872-924c4c69b7a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laptop">
       <h3>Quantum Laptop</h3>
-      <p>Ultra-thin, quantum computing-enhanced laptop with retina display and 48-core processor.</p>
+      <p>Lightning-fast computing with stunning design. Built for creators and coders alike.</p>
     </div>
     <div class="card">
-      <img src="https://source.unsplash.com/300x200/?vr,technology" alt="Product 3">
+      <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="VR Headset">
       <h3>VR Headset X</h3>
-      <p>Immersive virtual experience with retina resolution, haptic feedback, and low latency.</p>
+      <p>Enter new realities with ultra-HD visuals and full motion tracking. It's next-level VR.</p>
     </div>
   </div>
 
 </body>
 </html>
-
