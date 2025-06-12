@@ -108,6 +108,9 @@
       box-shadow: 0 0 20px #00ffcc33;
       transition: transform 0.3s ease;
       backdrop-filter: blur(5px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .card:hover {
@@ -116,17 +119,22 @@
 
     .card img {
       width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
       border-radius: 8px;
     }
 
     .card h3 {
       color: #00ffcc;
       margin: 1rem 0 0.5rem;
+      text-align: center;
     }
 
     .card p {
       color: #ccc;
       font-size: 0.95rem;
+      text-align: center;
     }
   </style>
 </head>
@@ -144,4 +152,75 @@
     <div class="logo">Proron</div>
     <div class="nav-links">
       <a href="#">Home</a>
-      <a href="#">
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="card-container">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Smartphone">
+      <h3>AI Smartphone</h3>
+      <p>Powered by neural processors and AI photography. Experience smart like never before.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1610484820872-924c4c69b7a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laptop">
+      <h3>Quantum Laptop</h3>
+      <p>Lightning-fast computing with stunning design. Built for creators and coders alike.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="VR Headset">
+      <h3>VR Headset X</h3>
+      <p>Enter new realities with ultra-HD visuals and full motion tracking. It's next-level VR.</p>
+    </div>
+  </div>
+
+  <!-- particles.js script -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80
+        },
+        "color": {
+          "value": "#00ffcc"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.5
+        },
+        "size": {
+          "value": 3
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#00ffcc",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
+</body>
+</html>
+
