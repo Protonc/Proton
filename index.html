@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Showcase</title>
+  <meta charset="UTF-8">
+  <title>Proron</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: #0d0d0d;
-      color: #e0e0e0;
-      overflow-x: hidden;
+      background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+      color: white;
     }
 
-    header {
-      background: #111;
+    /* Navbar */
+    .navbar {
+      background-color: #111;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -28,103 +22,76 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.7);
     }
 
-    header h1 {
+    .logo {
       font-size: 1.8rem;
-      color: #00ffe1;
+      font-weight: bold;
+      color: #00ffcc;
+      letter-spacing: 2px;
     }
 
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #aaa;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #00ffe1;
-    }
-
-    .container {
-      padding: 4rem 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Card Container */
+    .card-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 2rem;
       gap: 2rem;
     }
 
     .card {
-      background: #1a1a1a;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0, 255, 225, 0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
+      background: #1f1f1f;
+      border: 1px solid #00ffcc44;
+      border-radius: 10px;
+      width: 300px;
+      padding: 1rem;
+      box-shadow: 0 0 20px #00ffcc33;
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(0, 255, 225, 0.5);
     }
 
     .card img {
       width: 100%;
-      border-radius: 12px;
-      margin-bottom: 1rem;
+      border-radius: 8px;
     }
 
-    .card h2 {
-      margin-bottom: 0.5rem;
-      color: #00ffe1;
+    .card h3 {
+      color: #00ffcc;
+      margin: 1rem 0 0.5rem;
     }
 
     .card p {
-      margin-bottom: 1rem;
-    }
-
-    .card a {
-      text-decoration: none;
-      color: #00ffe1;
-      border: 1px solid #00ffe1;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-
-    .card a:hover {
-      background: #00ffe1;
-      color: #0d0d0d;
+      color: #ccc;
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>My Project Showcase</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <main class="container" id="projects">
-    <div class="card">
-      <img src="https://placehold.co/400x200/111/00ffe1?text=Game+Engine" alt="Game Engine">
-      <h2>Game Engine</h2>
-      <p>A custom game engine made using C++ and OpenGL. Learn about shaders, rendering, and more.</p>
-      <a href="https://github.com/Protonc/GameEngine-OpenGL">View on GitHub</a>
-    </div>
+  <div class="navbar">
+    <div class="logo">Proron</div>
+  </div>
 
+  <div class="card-container">
     <div class="card">
-      <img src="https://placehold.co/400x200/111/00ffe1?text=Neural+Net" alt="AI Project">
-      <h2>Neural Network AI</h2>
-      <p>A simple neural network from scratch in Python with training logic and test cases.</p>
-      <a href="https://github.com/Protonc/NeuralNetwork-AI">View on GitHub</a>
+      <img src="https://source.unsplash.com/300x200/?smartphone,technology" alt="Product 1">
+      <h3>AI Smartphone</h3>
+      <p>Powered by next-gen AI chips and neural processing for ultimate speed and camera quality.</p>
     </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/300x200/?laptop,technology" alt="Product 2">
+      <h3>Quantum Laptop</h3>
+      <p>Ultra-thin, quantum computing-enhanced laptop with retina display and 48-core processor.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/300x200/?vr,technology" alt="Product 3">
+      <h3>VR Headset X</h3>
+      <p>Immersive virtual experience with retina resolution, haptic feedback, and low latency.</p>
+    </div>
+  </div>
 
-    <div class="card">
-      <img src="https://placehold.co/400x200/111/00ffe1?text=Python+Games" alt="Python Projects">
-      <h2>Python Projects</h2>
-      <p>Some basic but fun Python projects like calculators and guessing games as I relearn Python.</p>
-      <a href="https://github.com/Protonc/Python-Relearning">View on GitHub</a>
-    </div>
-  </main>
 </body>
 </html>
+
